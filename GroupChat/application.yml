@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: testtest
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+greetings:
+  value: Welcome

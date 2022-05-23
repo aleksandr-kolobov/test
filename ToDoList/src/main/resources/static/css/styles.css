@@ -1,0 +1,41 @@
+h1 {
+    font-size: 36pt;
+    color: rgb(0,200,0);
+}
+
+#target-form {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #88888878;
+}
+
+#target-form form {
+    background-color: rgb(230,130,130);
+    border: 1px solid #333;
+    width: 300px;
+    padding: 20px;
+}
+
+#target-form h2 {
+    margin-top: 0;
+}
+
+#target-form label {
+    display: block;
+}
+
+#target-form form > * {
+    margin-bottom: 5px;
+}
+
+.greetings-paragraph {
+ font-size: 24pt;
+    color: rgb(220,20,20);
+}

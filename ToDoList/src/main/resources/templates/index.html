@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div id="target-form">
+        <form>
+            <h2>Добавление дела</h2>
+            <label>Название дела:</label>
+            <input type="text" name="name" value="">
+            <label>Время суток для выполнения:</label>
+            <input type="text" name="time" value="">
+            <hr>
+            <button id="save-target">Сохранить</button>
+        </form>
+    </div>
+    <h1>Список дел на день (<span th:text="${targetsCount}">0</span>)</h1>
+    <button id="show-add-target-form">Добавить дело</button>
+    <br><br>
+    <div id="target-list">
+        <div th:each="target : ${targets}">
+            <a href="#" class="target-link" th:attr="data-id=${target.id}" th:text="${target.name}"></a>
+            <br>
+        </div>
+    </div>
+    <br>
+    <button id="delete-all-targets">Очистить список дел</button>
+    <br>
+    <p class="greetings-paragraph" th:text="${greetings}"></p>
+</body>
+</html>
